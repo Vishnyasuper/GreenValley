@@ -1,0 +1,126 @@
+
+.page-header{
+
+  padding: 14px 20px 18px 20px;
+  margin: 0;
+  border-bottom: none;
+
+  &__inner{
+    .container-large-fixed();
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    // width: 100%;
+    // margin: 0 auto;
+
+    // @media (min-width: @screen-sm-min-min) and (max-width: @screen-sm){
+    @media (min-width: @screen-sm-min-min){
+      width: 100%;
+      padding: 0 20px;
+    // display: block;
+      // padding-right: 30px;
+    }
+
+    @media (min-width: @screen-lg){
+      // width: 100%;
+      // min-width: 1200px;
+      justify-content: space-between;
+      // padding: 16px 100px;
+      width: @screen-lg;
+      // width: 1200px;
+      padding: 0 10px;
+      margin: 0 auto;
+      .main-logo{
+        display: inline-block;
+      }
+    }
+
+  }
+
+  // &__inner:after{
+  //   content: '';
+  //   clear: both;
+  //   display: block;
+  // }
+
+  &__logo{
+    // flex-basis: 180px;
+    margin: 0 auto;
+
+    @media (min-width: @screen-lg){
+      flex-basis: 180px;
+    }
+  }
+
+  &__contact{
+    display: none;
+
+    @media (min-width: @screen-lg){
+      flex-basis: 300px;
+      min-width: 300px;
+      display: inline-block;
+      margin-right: 20px;
+    }
+  }
+
+  &__phone{
+
+    @media (min-width: @screen-lg){
+      display: block;
+      font-family: @font_PT_SansCaption;
+      font-size: 18px;
+      font-weight: 700;
+      color: @link-header-color;
+    }
+  }
+
+  &__address{
+
+    @media (min-width: @screen-lg){
+      display: block;
+      font-family: @font_FiraSans;
+      font-size: 14px;
+      font-weight: 400;
+      color: @link-header-color;
+    }
+  }
+
+  &__btn{
+    flex-basis: 180px;
+    min-width: 180px;
+    display: none;
+    @media (min-width: @screen-lg){
+      width: 100%;
+      display: inline-block;
+    }
+
+  }
+}
+
+.btn{
+  // padding: 0;
+}
+.btn--icon{
+  width: 100%;
+  padding: 0;
+  font-family: @font_FiraSans;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: #ff7435;
+  color: #ffffff;
+  border-radius: 18px;
+  line-height: 18px;
+  padding: 10px 19px;
+  margin: 0;
+}
+
+// .page-header:after{
+//   @media (max-width: @screen-lg-min-min) {
+//     background-image: url('../../img/page-header__icon.png');
+//   }
+
+//   @media (max-width: @screen-lg){
+//     display: none;
+//   }
+// }
