@@ -118,18 +118,19 @@ loadFont(
         <div class="page-header__logo">
           <a href="#" class="main-logo"><img src="img/logo.png" alt="Logo" width: "143" height="49"></a>
         </div>
-        <nav class="main-nav">
-          <ul class="main-nav__list" id="nav">
+        <nav class="main-nav" id="main-nav">
+          <ul class="main-nav__list" id="main-nav__list">
               <li class="main-nav__item"><a href="roomlist.html" class="main-nav__link">Номера</a></li>
               <li class="main-nav__item  main-nav__item--active"><a href="roomlist.html" class="main-nav__link">Коттедж</a></li>
-              <li class="main-nav__item"><a href="" class="main-nav__link">Ресторан</a></li>
-              <li class="main-nav__item"><a href="" class="main-nav__link">Отдых</a></li>
-              <li class="main-nav__item"><a href="" class="main-nav__link">Контакты</a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__link">Ресторан</a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__link">Отдых</a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__link">Контакты</a></li>
           </ul>
           <!-- <span class="main-nav__toggler"><span></span></span> -->
-          <a href="index.html" class="main-nav__toggler" id="toggler"><span></span></a>
+
 
         </nav>
+        <a href="#" class="toggler" id="toggler"><span></span></a>
         <div class="page-header__contact">
             <a href="tel:+7 812 777-55-88" class="page-header__phone">+7 812 777-55-88</a>
             <span class="page-header__address">г.Санкт-Петербург, Приморское ш.600</span>
@@ -151,8 +152,15 @@ loadFont(
               <div class="vacation-slider__inner">
                 <!-- <h1 class="vacation-slider__title"> -->
                 <div class="vacation-slider__title">
-                  <span class="vacation-slider__title-first">Семейный отдых на  берегу</span><!-- </br> -->
-                  <span class="vacation-slider__title-second">Финского залива</span></div>
+                  <!-- <span class="vacation-slider__title-first">Семейный отдых на  берегу</span>
+                  <span class="vacation-slider__title-line"></span>
+                  <span class="vacation-slider__title-second">Финского залива</span> -->
+
+
+
+                  <span class="vacation-slider__title-first">Семейный отдых на  берегу</span>
+                  <span class="vacation-slider__title-second">Финского залива</span>
+                </div>
                   <!-- </h1> -->
                   <p class="vacation-slider__description">
               <!-- <span class="vacation-slider__description-first"> -->Green Valley - это современная база отдыха<!-- </span>
@@ -264,7 +272,7 @@ loadFont(
 
       <section class="gallery">
         <div class="gallery__inner">
-          <div class="gallery__img owl-carousel"><div class="gallery__img-skin"><img src="img/gallery.jpg" alt="Пример комнаты" class="gallery__photo" id="gallery-large-img"></div></div>
+          <div id="gallery_large" class="gallery__img owl-carousel"><div class="gallery__img-skin"><img src="img/gallery.jpg" alt="Пример комнаты" class="gallery__photo" id="gallery-large-img"></div></div>
 
           <!-- <div id="gallery-large"></div> -->
           <div id="gallery" class="gallery__items owl-carousel">
@@ -349,26 +357,46 @@ loadFont(
           <a href="" id="reviews__btn" class="btn btn--border">Все отзывы</a>
         </div>
       </section>
-      <section class="action">
+      <!-- <section class="action">
         <div class="action__inner">
           <h1 class="action__title">Акции и предложения</h1>
-          <div id="action" class="action__slider owl-carousel">
+          <div id="act" class="action__slider owl-carousel">
 
             <div class="action__item">
-            <div class="action__img">
-                <div class="action__img-skin"><img src="img/action_bg1.jpg" alt="Акция1" width="767" height="299" class="action__photo">
-                </div>
+              <img src="img/action_bg__1.jpg" alt="">
             </div>
-              <div class="action__sentence">
-                <h2>Скидки в мае</h2>
-                <div class="action__text">
-                  Забронируйте номер или коттедж любой категории до 31 июня и получите скидку 10% !
-                </div>
-              </div>
+            <div class="action__item">
+              <img src="img/action_bg__2.jpg" alt="">
+            </div> -->
+
+            <!-- <div class="action__item">
+            <div class="action__img">
+                <img src="img/action_bg__1.jpg" alt="Акция1"  class="action__photo">
+                  <div class="action__sentence">
+                    <h2>Скидки в мае</h2>
+                    <div class="action__text">
+                      Забронируйте номер или коттедж любой категории до 31 июня и получите скидку 10% !
+                    </div>
+                  </div>
+
+            </div>
+
             </div>
             <div class="action__item">
               <div class="action__img">
-                <div class="action__img-skin"><img src="img/action_bg2.jpg" alt="Акция2" width="767" height="299" class="action__photo">
+                <img src="img/action_bg__2.jpg" alt="Акция2"  class="action__photo">
+                <div class="action__sentence">
+                <h2>Скидки в мае</h2>
+                <div class="action__text">
+                  Забронируйте номер или коттедж любой категории до 31 июня и получите скидку 10%!
+                </div>
+              </div>
+              </div>
+
+            </div> -->
+           <!--  <div class="action__item">
+              <div class="action__img">
+                <div class="action__img-skin"><img src="img/action_bg__2.jpg" alt="Акция2"  class="action__photo">
                 </div>
               </div>
               <div class="action__sentence">
@@ -377,12 +405,62 @@ loadFont(
                   Забронируйте номер или коттедж любой категории до 31 июня и получите скидку 10%!
                 </div>
               </div>
-            </div>
-          </div>
+            </div> -->
+            <!-- <div class="action__item">
+              <div class="action__img">
+                <div class="action__img-skin"><img src="img/action_bg__2.jpg" alt="Акция2"  class="action__photo">
+                </div>
+              </div>
+              <div class="action__sentence">
+                <h2>Скидки в мае</h2>
+                <div class="action__text">
+                  Забронируйте номер или коттедж любой категории до 31 июня и получите скидку 10%!
+                </div>
+              </div>
+            </div> -->
+         <!--  </div> -->
           <!-- <ul class="action__tabs">
               <li class="action__tab"><a href="#slide-1">item 1</a></li>
               <li class="action__tab"><a href="#slide-2">item 1</a></li>
           </ul> -->
+        <!-- </div>
+      </section> -->
+      <section class="action_new">
+        <div class="action_new__inner">
+          <div class="action_new__title">Акции и предложения</div>
+          <div id="action_new" class="action_new__slider owl-carousel">
+            <div class="action_new__item">
+              <div class="action_new__img">
+                <picture class="action_new__photo">
+                  <source srcset="./img/action_bg__1.jpg" media="(min-width: 1200px)">
+                  <source srcset="./img/action_bg_768__1.jpg" media="(min-width: 768px)">
+                  <img srcset="./img/action_bg_320__1.jpg" alt="Акция1">
+                </picture>
+
+                <!-- <img src="img/action_bg__1.jpg" width="1180px" height="335" alt="Акция 1" class="action_new__photo"> -->
+                <div class="action_new__sentence">
+                  <h2>Скидки в мае</h2>
+                  <div class="action__text">
+                  Забронируйте номер или коттедж любой категории до 31 июня и получите скидку 10%!
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="action_new__item">
+              <picture class="action_new__photo">
+                <source srcset="./img/action_bg__2.jpg" media="(min-width: 1200px)">
+                <source srcset="./img/action_bg_768__2.jpg" media="(min-width: 768px)">
+                <img srcset="./img/action_bg_320__2.jpg" alt="Акция2">
+              </picture>
+              <!-- <img src="img/action_bg__2.jpg" width="1180px" height="335" alt="Акция 2" class="action_new__photo"> -->
+              <div class="action_new__sentence">
+                <h2>Скидки в мае</h2>
+                <div class="action__text">
+                  Забронируйте номер или коттедж любой категории до 31 июня и получите скидку 10%!
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section class="map">
