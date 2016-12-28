@@ -41,10 +41,20 @@ $(document).ready(function(){
 
   //Промо на главной
 
-  $("#promo").owlCarousel({
-    items: 1,
-    loop: true,
+  // $("#promo").owlCarousel({
+  //   items: 1,
+  //   loop: true,
+  //   dots: false,
 
+  // });
+
+  var gallery_large = $('#gallery_large');
+  gallery_large.owlCarousel({
+    items: 1,                 // одновременно 4 миниатюры
+    //loop: true,               // включаем петлю
+    //center: true,             // центрируем активную миниатюру
+    //mouseDrag: true,         // отключаем перетаскивание мышом
+    dots: false,
   });
 
   // Галерея на главной
@@ -54,6 +64,7 @@ $(document).ready(function(){
     loop: true,               // включаем петлю
     center: true,             // центрируем активную миниатюру
     mouseDrag: true,         // отключаем перетаскивание мышом
+    dots: false,
   });
 
   // Следим за изменением в галерее (смена активного слайда)
@@ -81,8 +92,22 @@ $(document).ready(function(){
     mouseDrag: true,         // отключаем перетаскивание мышом
     nav: true,
     navText: false,
+    dots: false,
 
   });
+
+  var action_new = $('#action_new');
+  action_new.owlCarousel({
+    items: 1,                 // одновременно 2 миниатюры
+    loop: true,               // включаем петлю
+    center: true,             // центрируем активную миниатюру
+    mouseDrag: true,         // отключаем перетаскивание мышом
+    smartSpeed: 400,
+    dots: true,
+    dotsEach: 3,
+
+  });
+
 
   var owl = $('.owl-carousel');
   owl.owlCarousel();
@@ -104,43 +129,72 @@ $(document).ready(function(){
 
 });
 
+// $(document).ready(function(){
+// // Галерея
+//   var action = $('#act');
+//   action.owlCarousel({
+//     items: 0,                 // одновременно 1 миниатюры
+//     loop: true,               // включаем петлю
+//     center: true,             // центрируем активную миниатюру
+//     mouseDrag: true,         // отключаем перетаскивание мышом
+//     nav: false,
+//     navText: false,
+//     //dots: true,
+
+//   });
+
+//   var owl = $('.owl-carousel');
+//   owl.owlCarousel();
+// // Go to the next item
+//   $('.customNextBtn').click(function() {
+//   owl.trigger('next.owl.carousel', [400]);
+//   })
+// // Go to the previous item
+//   $('.customPrevBtn').click(function() {
+//     // With optional speed parameter
+//     // Parameters has to be in square bracket '[]'
+//     owl.trigger('prev.owl.carousel', [400]);
+//   })
+
+
+// });
+
+// $(document).ready(function(){
+// // Галерея
+//   var action_new = $('#action_new');
+//   action_new.owlCarousel({
+//     items: 1,                 // одновременно 2 миниатюры
+//     //loop: true,               // включаем петлю
+//     //center: true,             // центрируем активную миниатюру
+//     //mouseDrag: true,         // отключаем перетаскивание мышом
+//     //autoWidth: true,
+//     //autoHeight:true,
+//     smartSpeed: 400
+//     //nav: true,
+//     //navText: false,
+
+//   });
+
+
+// });
+
 $(document).ready(function(){
-// Галерея
-  var action = $('#action');
-  action.owlCarousel({
-    items: 2,                 // одновременно 1 миниатюры
-    loop: true,               // включаем петлю
-    center: true,             // центрируем активную миниатюру
-    mouseDrag: true,         // отключаем перетаскивание мышом
-    nav: false,
-    navText: false,
-    dots: true,
 
-  });
-
-  var owl = $('.owl-carousel');
-  owl.owlCarousel();
-// Go to the next item
-  $('.customNextBtn').click(function() {
-  owl.trigger('next.owl.carousel', [400]);
-  })
-// Go to the previous item
-  $('.customPrevBtn').click(function() {
-    // With optional speed parameter
-    // Parameters has to be in square bracket '[]'
-    owl.trigger('prev.owl.carousel', [400]);
-  })
-
-
-});
-
-$(document).ready(function(){
+  $( function() {
+    $('#datepicker-entry').datepicker().datepicker("option", "dateFormat", "yy-mm-dd", "showAnim", "slide");
+    $('#datepicker-entry').datepicker().datepicker("option", "showAnim", "slide");
+    $('#datepicker-exit').datepicker().datepicker("option", "dateFormat", "yy-mm-dd", "showAnim", "slide");
+    $('#datepicker-exit').datepicker().datepicker("option", "showAnim", "slide");
+  } );
 
   var toggler = document.getElementById('toggler');
 toggler.onclick = function(e){
   e.preventDefault();
-  toggler.classList.toggle('main-nav__toggler--close');
-  document.getElementById('nav').classList.toggle('main-nav__list--visible');
+  toggler.classList.toggle('toggler--close');
+  //document.getElementById('nav').classList.toggle('main-nav__list--visible');
+  document.getElementById('main-nav').classList.toggle('main-nav--active');
+  document.getElementById('main-nav__list').classList.toggle('main-nav__list--active');
+  document.getElementById('page-header').classList.toggle('page-header--active');
 }
 
 
@@ -224,3 +278,15 @@ $('#promo-tab1').on('click', function(e) {
   $('#promo-tab2').removeClass('promo__tab--active');
   $('#promo-tab1').addClass('promo__tab--active');
 });
+
+
+// $(document).ready(function(){
+
+//   $( function() {
+//     $( "#datepicker" ).datepicker();
+//   } );
+
+//   //$( '#datepicker' ).datepicker().datepicker("option", "dateFormat", "yy-mm-dd");
+
+
+// });

@@ -39,6 +39,15 @@
 
     li{
       padding: 17px;
+      label{
+        list-style: none;
+        color: @form-type-color;
+        font-family: @font_FiraSans;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+
+      }
 
     }
 
@@ -46,7 +55,15 @@
 
   &__property{
       display: none;
-    }
+  }
+
+  // &--hotels{
+  //   display: none;
+  // }
+
+  // &__cottages{
+  //   display: block;
+  // }
 
   @media (min-width: @screen-sm){
 
@@ -179,9 +196,54 @@
 
     }
 
+.form-step3__hotel-type-1:checked ~ .form-step3__property1 {display: flex;}
+.form-step3__hotel-type-1:checked ~ .form-step3__property2 {display: none;}
+.form-step3__hotel-type-1:checked ~ .form-step3__property3 {display: none;}
+.form-step3__hotel-type-1:checked ~ .form-step3__property4 {display: none;}
+
+.form-step3__hotel-type-2:checked ~ .form-step3__property2 {display: flex;}
+.form-step3__hotel-type-2:checked ~ .form-step3__property1 {display: none;}
+.form-step3__hotel-type-2:checked ~ .form-step3__property3 {display: none;}
+.form-step3__hotel-type-2:checked ~ .form-step3__property4 {display: none;}
+
+.form-step3__hotel-type-3:checked ~ .form-step3__property3 {display: flex;}
+.form-step3__hotel-type-3:checked ~ .form-step3__property1 {display: none;}
+.form-step3__hotel-type-3:checked ~ .form-step3__property2 {display: none;}
+.form-step3__hotel-type-3:checked ~ .form-step3__property4 {display: none;}
+
+.form-step3__hotel-type-4:checked ~ .form-step3__property4 {display: flex;}
+.form-step3__hotel-type-4:checked ~ .form-step3__property1 {display: none;}
+.form-step3__hotel-type-4:checked ~ .form-step3__property2 {display: none;}
+.form-step3__hotel-type-4:checked ~ .form-step3__property3 {display: none;}
+
+.form-step3__cottage-type-1:checked ~ .form-step3__property1 {display: flex;}
+.form-step3__cottage-type-1:checked ~ .form-step3__property2 {display: none;}
+.form-step3__cottage-type-1:checked ~ .form-step3__property3 {display: none;}
+.form-step3__cottage-type-1:checked ~ .form-step3__property4 {display: none;}
+
+.form-step3__cottage-type-2:checked ~ .form-step3__property2 {display: flex;}
+.form-step3__cottage-type-2:checked ~ .form-step3__property1 {display: none;}
+.form-step3__cottage-type-2:checked ~ .form-step3__property3 {display: none;}
+.form-step3__cottage-type-2:checked ~ .form-step3__property4 {display: none;}
+
+.form-step3__cottage-type-3:checked ~ .form-step3__property3 {display: flex;}
+.form-step3__cottage-type-3:checked ~ .form-step3__property1 {display: none;}
+.form-step3__cottage-type-3:checked ~ .form-step3__property2 {display: none;}
+.form-step3__cottage-type-3:checked ~ .form-step3__property4 {display: none;}
+
+.form-step3__cottage-type-4:checked ~ .form-step3__property4 {display: flex;}
+.form-step3__cottage-type-4:checked ~ .form-step3__property1 {display: none;}
+.form-step3__cottage-type-4:checked ~ .form-step3__property2 {display: none;}
+.form-step3__cottage-type-4:checked ~ .form-step3__property3 {display: none;}
+
+
   }
 
   @media (min-width: @screen-lg){
+    &__inner{
+      max-width: 100%;
+    }
+
     &__type{
       width: 780px;
       margin: 0 auto;
@@ -196,4 +258,23 @@
   }
 
 
+}
+
+
+.form-step3 {
+  &__hotel-type-1,
+  &__hotel-type-2,
+  &__hotel-type-3,
+  &__hotel-type-4, {
+    display: none;
+  }
+}
+
+.form-step3 {
+  &__cottage-type-1,
+  &__cottage-type-2,
+  &__cottage-type-3,
+  &__cottage-type-4, {
+    display: none;
+  }
 }

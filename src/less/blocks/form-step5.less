@@ -3,6 +3,13 @@
     .container-large-fixed();
     padding: 50px 0 80px 0;
     background-color: @form-bg-color;
+
+  }
+
+  &__cost-inner{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
   }
 
   &__number{
@@ -104,7 +111,7 @@
     padding: 22px 40px;
     display: block;
     background-color: @reviews-color;
-    margin-bottom: 50px;
+    //margin-bottom: 50px;
   }
 
   &__error-name{
@@ -159,7 +166,103 @@
 
   @media (min-width: @screen-sm){
     &__cost-inner{
-      display: inline-flex;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__cost{
+      margin-bottom: 0;
+      padding: 0 20px 10px 20px;
+    }
+
+    &__error{
+      flex-basis: 274px;
+    }
+
+    &__cost-shape{
+      flex-basis: 474px;
+
+    }
+
+    &__cost-arrival{
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__cost-arrival_name{
+      flex-basis: 164px;
+    }
+
+    &__cost-arrival_description{
+      flex-basis: 311px;
+      display: block;
+      text-align: left;
+    }
+
+    &__btn{
+      margin: 0;
+    }
+
+    &__cost-now{
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__cost-now_name{
+      flex-basis: 164px;
+    }
+
+    &__cost-now_description{
+      flex-basis: 311px;
+      display: block;
+      text-align: left;
+    }
+
+    &__number-card{
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__name-information{
+      flex-basis: 260px;
+      margin-right: 20px;
+    }
+
+    &__code{
+      flex-basis: 154px;
+    }
+
+
+  }
+
+  @media (min-width: @screen-lg){
+    &__inner{
+      max-width: 100%;
+      text-align: center;
+    }
+
+    &__cost-inner{
+
+      justify-content: center;
+    }
+
+    &__cost{
+      padding: 0 25px 10px 20px;
+    }
+
+    &__error{
+      flex-basis: 280px;
+      margin-right: 20px;
+    }
+
+    &__cost-shape{
+      flex-basis: 480px;
+    }
+
+    &__btn{
+      width: 780px;
+      margin: 0 auto;
     }
   }
 

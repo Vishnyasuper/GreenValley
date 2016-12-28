@@ -43,12 +43,15 @@
     justify-content: center;
     border: 1px solid @single-room-border-color;
     padding: 25px 0;
-
-  }
-
-  &__option:first-child{
+    label:nth-of-type(1){
       border-right: 1px solid @single-room-border-color;
+    }
+
   }
+
+  // &__option::nth-of-type(1){
+  //     border-right: 1px solid @single-room-border-color;
+  // }
 
   &__option{
 
@@ -81,6 +84,7 @@
     }
   }
 
+
   @media (min-width: @screen-sm){
 
     form{
@@ -90,6 +94,12 @@
 
     &__icon-img{
       padding: 15px 50px;
+    }
+
+    &__option-skin{
+      margin: 0 auto;
+      width: 380px;
+      //flex-basis: 380px;
     }
 
   }
@@ -109,3 +119,35 @@
   }
 
 }
+
+
+// .form-step2__icon{
+//   position: relative;
+// }
+
+// // .icon{
+// //   position: relative;
+// // }
+
+// .icon--check{
+//   position: absolute;
+//     top: 78%;
+//     left: 50%;
+//     transform: translate(-50%,0);
+//     color: #0ab89d;
+//     opacity: 1;
+//     transition: all ease .4s;
+
+//     font-size: 16px;
+//     font-family: icon!important;
+//     speak: none;
+//     font-style: normal;
+//     font-weight: 400;
+//     font-variant: normal;
+//     text-transform: none;
+//     line-height: 1;
+// }
+
+// .icon:after{
+//   content: "\f00c";
+// }

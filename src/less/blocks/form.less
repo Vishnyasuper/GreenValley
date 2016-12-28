@@ -1,0 +1,12 @@
+.form__place-type-1:checked ~ .form-step3--hotels {display: block;}
+.form__place-type-1:checked ~ .form-step3--cottages {display: none;}
+.form__place-type-2:checked ~ .form-step3--hotels {display: none;}
+.form__place-type-2:checked ~ .form-step3--cottages {display: block;}
+
+.form {
+  &__place-type-1,
+  &__place-type-2 {
+    display: none;
+  }
+}
+
