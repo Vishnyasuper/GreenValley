@@ -1,47 +1,45 @@
 .main-nav{
 
-  //flex-basis: 30px;
-  // flex-grow: 1;
   text-align: left;
-  //display: block;
-  //position: relative;
+  display: none;
 
   &--active {
       display: block;
     }
 
   &__list{
-    list-style: none;
-  padding: 0;
-  margin: 0;
-  //position: absolute;
-  top: 0;
-  right: 0;
-  // left: 0;
-  display: none;
 
-    // &--visible {
-    //   display: block;
-    // }
 
     &--active {
-        text-align: center;
+        text-align: left;
         list-style: none;
         position: absolute;
-        top: 100%;
+        top: 15%;
         left: 50%;
         transform: translateX(-50%);
         background-color: @reviews-color;
         width: 100%;
         border-top: 1px solid @form-bg-color;
         z-index: 1;
+
+        a{
+          font-family: @font_FiraSans;
+          color: @link-header-color;
+          font-weight: 400;
+          font-size: 14px;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
       }
   }
 
+  ul{
+    padding: 0;
+  }
+
 &__item {
-    //display: block;
-    padding: 10px 0px;
-    //border-bottom: 1px solid @form-bg-color;
+    padding: 10px 20px;
+    border-bottom: 1px solid @form-bg-color;
 
     &:first-child {
       a {
@@ -55,8 +53,6 @@
       height: 3em;
       line-height: 3;
       background-color: @reviews-color;
-      color: @link-header-color;
-      font-weight: 700;
       text-decoration: none;
       margin-bottom: 1px;
     }
@@ -67,18 +63,13 @@
     flex-basis: 550px;
     flex-direction: row;
     justify-content: flex-start;
-    // min-width: 500px;
-    // padding-right: 100px;
-    // width: 100%;
-    // display: inline-block;
 
     &__list{
-      display: inline-block;
-      // flex-direction: row;
-      // justify-content: space-between;
-      margin: 0;
-      padding: 0;
-      line-height: 54px;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
 
     }
 
@@ -93,6 +84,8 @@
     &__item{
       display: inline-block;
       list-style-type: none;
+      padding: 10px 0;
+      border-bottom: none;
     }
 
     a{

@@ -4,13 +4,17 @@
   padding: 14px 20px 18px 20px;
   margin: 0;
   border-bottom: none;
+  &--active {
+    //border: 1px solid @promo-tab-color;
+    border-bottom: none;
+  }
   //position: relative;
 
   &__inner{
     .container-large-fixed();
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
     // width: 100%;
     // margin: 0 auto;
 
@@ -25,6 +29,9 @@
     @media (min-width: @screen-lg){
       // width: 100%;
       // min-width: 1200px;
+      display: flex;
+      flex-direction: row;
+
       justify-content: space-between;
       // padding: 16px 100px;
       width: @screen-lg;
@@ -47,6 +54,7 @@
   &__logo{
     // flex-basis: 180px;
     margin: 0 auto;
+    display: inline-block;
 
     @media (min-width: @screen-lg){
       flex-basis: 180px;
@@ -66,6 +74,8 @@
 
   &__phone{
 
+    display: none;
+
     @media (min-width: @screen-lg){
       display: block;
       font-family: @font_PT_SansCaption;
@@ -76,6 +86,8 @@
   }
 
   &__address{
+
+    display: none;
 
     @media (min-width: @screen-lg){
       display: block;
